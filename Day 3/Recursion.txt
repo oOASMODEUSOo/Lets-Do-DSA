@@ -1,0 +1,29 @@
+1. recursion is technique in which you call function inside a function
+2. every recursive function contains a base condition who's job is to terminate the infinite loop.
+3. how to trace a recursive function - they are traced in a tree manner
+ ref to first.cpp
+
+funt(3)
+/     \
+3   funt(2)
+    /     \
+    2   funt(1)
+        /     \
+        1   funt(0)
+
+opt: 3 2 1
+
+ ref to understandingRecursionSecond.cpp
+
+            fun2(3)
+            /     \
+        fun2(2)    3
+        /     \
+    fun2(1)    2
+    /     \
+fun2(0)    1
+
+these are called the tree of tracking of recursive function
+
+4. if the statements are writting after the recursive call then the output will be given when going back the tree and vice versa
+
