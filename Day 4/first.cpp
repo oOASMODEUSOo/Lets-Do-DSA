@@ -4,7 +4,7 @@ using namespace std;
 
 void funt(int n){
     if (n>0){
-        cout << n;
+        cout << n << endl;
         funt(n-1);
     }
 }
@@ -12,7 +12,7 @@ void funt(int n){
 int main(){
     
     int x = 3;
-
+    funt(x);
 
     return 0;
 }

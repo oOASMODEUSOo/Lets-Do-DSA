@@ -1,0 +1,26 @@
+This is notes for vim editor which in made inside vim editor
+
+to enter insert mode press I and to exit and goto command mode you can press
+esc
+
+:w is used to save a file
+:q is used to exit (meme)
+:wq is used to save and exit the file
+:q! is used to force exit the vim
+
+we can use "dd" to delete the current line
+we can put a number before dd to delete the number of lines
+
+to undo the damange we did in the first few modes with U
+to redo R
+
+in command mode we can / to find some word in the file lower case n will go
+for next find and upper case N will go back to prev find in the file.
+
+:%s/<word to replace>/<replace word>/
+if we add g after that, it means we agree to replace all
+if we add c after that, it will ask for confirmation before editing the word
+
+
+
+

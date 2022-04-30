@@ -13,10 +13,9 @@ int main(){
     
     int x = 3;
     fun2(x);
-
     return 0;
 }
-
+ 
 /*
             fun2(3)
             /     \
