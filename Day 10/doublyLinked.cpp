@@ -50,7 +50,7 @@ void insertAfter(Node* prev_ref, int data){  //working function
     cout << "beech me ghusa dia"<< endl;
 }
 
-void append(Node** head_ref, int data){  // not working for some reason
+void append(Node** head_ref, int data){  //working for some reason
     Node* new_node = new Node();
     new_node->data =  data;
 
