@@ -61,6 +61,7 @@ void append(Node** head_ref, int data){  // not working for some reason
     if (*head_ref == NULL){
         new_node->prev = NULL;
         *head_ref = new_node;
+        cout << "yes this part is working" << endl;
         return;
     }
 
@@ -70,8 +71,8 @@ void append(Node** head_ref, int data){  // not working for some reason
 
     last_node->next = new_node;
     new_node->prev = last_node;
-    return; 
     cout << "end me ghusa dia" << endl;
+    return; 
 }
 
 void printLL(Node* start){
@@ -80,6 +81,27 @@ void printLL(Node* start){
         start = start->next;
     }
 }
+
+//printing the linked list from both side
+void printList(Node* node)
+{
+    Node* last;
+    cout<<"\nTraversal in forward direction \n";
+    while (node != NULL)
+    {
+        cout<<" "<<node->data<<" ";
+        last = node;
+        node = node->next;
+    }
+ 
+    cout<<"\nTraversal in reverse direction \n";
+    while (last != NULL)
+    {
+        cout<<" "<<last->data<<" ";
+        last = last->prev;
+    }
+}
+ 
 
 int main(){
     
@@ -90,7 +112,7 @@ int main(){
     append(&head, 4);
     insertAfter(head->next, 8);
 
-    printLL(head);
+    printList(head);
 
     return 0;
 }
