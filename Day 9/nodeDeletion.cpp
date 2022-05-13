@@ -33,28 +33,28 @@ void printList(Node* n)
 
 void deleteNode(Node** head_ref, int key){
 
-    Node* temp = *head_ref;
-    Node* prev = NULL;
+    Node* temp = *head_ref;  //created a temp pointer with dereference to the headref provided
+    Node* prev = NULL;  //prev node created and entered NULL in its next
 
-    if (temp != NULL && temp->data == key){
-        *head_ref = temp->next;
-        delete temp;
-        return;
+    if (temp != NULL && temp->data == key){  //check if the node with the value
+        *head_ref = temp->next;  //if found headref me temp ke next ka value daal do
+        delete temp;            //free the memory
+        return;                //and exit the func
     }
 
-    else{
-        while (temp != NULL && temp->data != key){
-            prev = temp;
-            temp = temp->next;
+    else{  //if the head isnt the key we were looking for 
+        while (temp != NULL && temp->data != key){      //then run a loop to find where the key is
+            prev = temp;    //when found put the whole value of temp into prev 
+            temp = temp->next;  //and in temp put adress jo temp ke next me pada hai
         }
     }
 
-    if (temp == NULL){
-        return;
+    if (temp == NULL){  //temp if found null 
+        return;     //then exit of the function 
     }
 
-    prev->next = temp->next;
-    delete temp;
+    prev->next = temp->next;    //
+    delete temp;  //delete the temp pointer created
 
 }
 
